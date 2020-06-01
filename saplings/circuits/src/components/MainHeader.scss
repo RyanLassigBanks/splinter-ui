@@ -26,4 +26,25 @@
     font-weight: 100;
     margin: 0 1rem 0 0;
   }
+
+  .managementType {
+    color: var(--color-grey);
+    span {
+      color: var(--color-grey);
+      padding: 0.25rem;
+    }
+  }
 }
+
+.viewToggle {
+    span a {
+      padding: 0.25rem;
+      text-decoration: none;
+    }
+    span a:hover {
+        color: #e6579a;
+    }
+  }
+
+
+

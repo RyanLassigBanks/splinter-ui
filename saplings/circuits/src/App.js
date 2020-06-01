@@ -33,6 +33,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import MainHeader from './components/MainHeader';
 import { LocalNodeProvider } from './state/localNode';
 import Content from './components/Content';
+import CircuitDetails from './components/circuitDetails/CircuitDetails';
 
 library.add(
   faPlus,
@@ -58,6 +59,9 @@ function App() {
             </Route>
             <Route path="/circuits/propose">
               <h5>Propose Circuit</h5>
+            </Route>
+            <Route path="/circuits/:circuitId">
+              <CircuitDetails/>
             </Route>
           </Switch>
         </Router>

@@ -17,9 +17,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import { useLocalNodeState } from '../../state/localNode';
 import { Circuit } from '../../data/processCircuits';
+
+const history = createBrowserHistory();
 
 const proposalStatus = (circuit, nodeID) => {
   const exclamation = (
@@ -48,7 +52,9 @@ const proposalStatus = (circuit, nodeID) => {
 const TableRow = ({ circuit }) => {
   const nodeID = useLocalNodeState();
   return (
-    <tr className="table-row">
+    <tr className="table-row" onClick={(e) => {
+      window.location.href = `/circuits/${circuit.id}`;
+    }}>
       <td className="text-highlight">{circuit.id}</td>
       <td>
         {
